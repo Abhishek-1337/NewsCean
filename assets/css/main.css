@@ -299,8 +299,6 @@ button:hover,
 }
 
 .headline{
-
-    padding: 0.4rem;
     font-size: 1rem;
     text-align: center;
     color: var(--light-color);
@@ -308,7 +306,6 @@ button:hover,
     letter-spacing: 1px;
     padding: 4px;
     text-transform: uppercase;
-    height: 100%;
 }
 
 .headline span{
@@ -379,6 +376,14 @@ button:hover,
     color:var(--hover-light-color);
 }
 
+.article:hover .article-data-spacer{
+    background-color: var(--hover-light-color);
+}
+
+.article:hover .article-title{
+    color: var(--hover-light-color);
+}
+
 .article-data{
     display: flex;
     gap: var(--gap);
@@ -392,6 +397,14 @@ button:hover,
     height: .5rem;
     background-color: var(--light-color);
     transform: rotate(45deg);
+}
+
+.title{
+    color: var(--light-color);
+}
+
+.article-title{
+    font-size: var(--font-size-md);
 }
 /* Featured articles - Sidebar */
 .sidebar{
@@ -820,7 +833,17 @@ button:hover,
     }
 
     .sign-up-btn{
-        padding: .4rem;
+        padding: 4px;
+    }
+
+    .btn.fancy-border:hover::before{
+        animation: animate_border .75s linear infinite;
+    }
+
+    @keyframes animate_border{
+        to{
+            transform: translateX(-50%)
+        }
     }
 
     .featured-articles-container{
